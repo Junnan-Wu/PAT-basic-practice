@@ -17,7 +17,6 @@ int judge(string s)
 	if (p*(t-p-1) != len - t - 1)return 3;
 	for (int i = 0; i < p; i++)
 	{
-		int j = len - 1 - i;
 		if (s[i] != 'A')return 4;
 	}
 	for (int i = t+1; i < len; i++)
