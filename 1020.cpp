@@ -1,5 +1,4 @@
 //1020	月饼
-1020
 #include<iostream>
 #include<vector>
 #include<algorithm>
