@@ -58,10 +58,10 @@ int main()
 	it = find_if(L.begin(), L.end(), judge(first));//找到地址为first的节点使用find_if()函数，注意第三个变量是一个函数，函数的定义在上面，这个函数可以传入参数first
 	exchange(*it, L[0]);//将地址为首地址的节点与L数组的第一个交换
 
-	//从第二个元素开始查找，找到倒数第二个元素,将所有的节点按照节点的顺序进行排序
-	for (int i = 1; i < N - 1; i++)
+  //从第二个元素开始查找，找到最后一个元素,将所有的节点按照节点的顺序进行排序
+	for (int i = 1; i < N; i++)
 	{
-		it = find_if(L.begin() + i, L.end(), judge(L[i-1].next));//从i的元素开始查找，查找地址为L[i-1]的下一个地址
+		it = find_if(L.begin() + i, L.end(), judge(L[i - 1].next));//从i的元素开始查找，查找地址为L[i-1]的下一个地址
 		if (it != L.end())//如果找到将其与L[i]的后一个节点进行交换
 			exchange(*it, L[i]);
 		else//如果没有找到，证明i-1节点后面断了，后面的元素需要都删除
